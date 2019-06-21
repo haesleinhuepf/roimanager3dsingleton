@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>26.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>net.haesleinhuepf</groupId>
+	<!-- note: the artifactId must contain an underscore _ to make ImageJ handle it correctly.-->
+	<artifactId>roimanager3dsingleton</artifactId>
+	<version>0.1.0</version>
+
+	<name>roimanager3dsingleton</name>
+	<description>roimanager3dsingleton</description>
+	<url>http://haesleinhuepf.net</url>
+	<inceptionYear>2019</inceptionYear>
+	<organization>
+		<name>MPI CBG</name>
+		<url>http://mpi-cbg.de</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>BSD3</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>haesleinhuepf</id>
+			<name>Robert Haase</name>
+			<url>https://haesleinhuepf.net</url>
+			<organization>MPI CBG</organization>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>none</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>ImageSc Forum</name>
+			<archive>http://forum.image.sc/</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/haesleinhuepf/roimanager3dsingleton</connection>
+        <developerConnection>scm:git:git@github.com/haesleinhuepf/roimanager3dsingleton</developerConnection>
+        <tag>HEAD</tag>
+		<url>https://github.com/haesleinhuepf/roimanager3dsingleton</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/haesleinhuepf/roimanager3dsingleton/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+	<properties>
+		<package-name>net.haesleinhuepf</package-name>
+		<license.licenseName>bsd_3</license.licenseName>
+		<license.copyrightOwners>Robert Haase, MPI CBG</license.copyrightOwners>
+		<imagej.app.directory>C:/programs/fiji-win64/Fiji.app/</imagej.app.directory>
+		<!--<imagej.app.directory>/home/rhaase/programs/fiji/Fiji.app/</imagej.app.directory>-->
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+     	</dependency>
+		<!-- wrong version???
+		<dependency>
+		  <groupId>com.github.mcib3d</groupId>
+		  <artifactId>mcib3d-plugins</artifactId>
+		  <version>master-3.9-gb1cad5c-26</version>
+		  <type>pom</type>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>com.github.mcib3d</groupId>
+			<artifactId>mcib3d-plugins</artifactId>
+			<version>3.96</version>
+			<systemPath>C:/Programs/fiji-win64/Fiji.app/plugins/mcib3d-suite/mcib3d_plugins-3.96.jar</systemPath>
+			<scope>system</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>j3dcore</artifactId>
+			<version>1.6.0-scijava-2</version>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>3D_Viewer</artifactId>
+			<version>4.0.1</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>https://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+
+</project>
